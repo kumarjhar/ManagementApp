@@ -7,7 +7,7 @@ This is completely a console based application for the management of products
 To install this you need to get the exe file attached with the Repository('Demoproject.exe)
 
 ```bash
-Double click the file and install it
+Double click the file and install it.
 ```
 
 ## Language
