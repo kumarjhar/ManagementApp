@@ -38,7 +38,7 @@ void Product::input()
 		cin>>price;   
 	    //*fileobject.write((char)&Object,sizeof(object)); 
 		   //this=&p
-		   fout.write((char*)this,sizeof(*this));
+		   fout.write((char*)&this,sizeof(*this)); //edited by Rahul
 		  // fout.write((char*)&p,sizeof(p));
 		   fout.close();
 		   }
@@ -49,7 +49,7 @@ void Product::input()
 		system("cls");
 	ifstream fin("product.dat",ios::in);
 	//this=&p
-	while(fin.read((char*)this,sizeof(*this)))
+	while(fin.read((char*)&this,sizeof(*this)))
 	{
 	
 		cout<<"\nDetail of Product:\n";
@@ -75,7 +75,7 @@ void Product:: search()
 	
 	//Arrays---search---->c file search----C++ search
 	//C++ file
-	while(fin.read((char*)this,sizeof(*this)))
+	while(fin.read((char*)&this,sizeof(*this)))
 	{
 	    if(sno==pno)
 	    {
